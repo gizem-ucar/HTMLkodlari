@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,600;1,100&display=swap');
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 0;
+    font-family: 'Poppins', sans-serif;
+}
+.logo{
+    width: 700px;
+    height: 65px;
+    margin-left: 0px;
+    padding: 10px;
+}
+.card{
+    width: 700px;
+    height: 600px;
+    margin: 100px 440px;
+    background-color: #fff;
+    border-radius:1%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.card2{
+    width: 659px;
+    height: 400px;
+    display: flex;
+    background-color: #fff;
+    border-radius: 1%;
+    margin: 0px 20px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(115, 171, 223);
+}
+section ul{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+} 
+/* section ul li{
+    list-style: none;
+    margin-left: 20px;
+} */
+section ul li a{
+    text-decoration: none;
+    padding: 6px 15px;
+    color: #003d6b;
+    border-radius: 20px;
+}
+ section ul li a:hover,
+section ul li a.active{
+    background: #fff;
+    color: #061d30;
+} 
+.link{
+    display: flex;
+    justify-content: space-between;
+}
+.govtr{
+    margin-right: 15px;
+}
+li{
+    margin-left: 20px;
+}
+body{
+    min-height: 1500px;
+    overflow-x: hidden;
+}
+
+.secmek{
+width: 657px;
+height: 50px;
+margin: 0px;
+display: flex;
+/* border-style: solid;
+border-width: 1px;
+border-color: rgb(115, 171, 223); */
+}
+.islem{
+    width: 657px;
+    height: 200px;
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+}
+.girisyap{
+    width: 657px;
+    height: 50px;
+    margin: 0px;
+    display:flex;
+    justify-content: space-around;
+}
+.tckimlik{
+    font-size: 13px;
+    margin: 15px;
+    margin-right: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+.edevlet{
+    font-size: 13px;
+    margin: 15px;
+    margin-right: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+.sanal{
+    display: flex;
+    font-size: 13px;
+    justify-content: flex-end;
+    margin-right: 30px;
+}
+.iptal{
+    width: 70px;
+    height: 55px;
+    background-color: rgb(211, 221, 253);
+    border-radius: 10%;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(115, 171, 223);
+}
+.giris{
+    width: 70px;
+    height: 55px;
+    background-color: rgb(211, 221, 253);
+    border-radius: 10%;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(115, 171, 223);
+}
+.footer{
+    font-size: 12px;
+    margin: 15px;
+}
