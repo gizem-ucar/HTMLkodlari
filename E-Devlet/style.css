@@ -9,131 +9,401 @@
     border: 0;
     font-family: 'Poppins', sans-serif;
 }
+html body{
+    min-height: 100%;
+    background: radial-gradient(circle farthest-corner at center,rgba(58,137,180,0) 0,rgba(58,137,180,.8) 100%),#FFF;
+}
+body{
+    height: 100%;
+}
 .logo{
-    width: 700px;
-    height: 65px;
-    margin-left: 0px;
-    padding: 10px;
+    width: 98%;
+    height: 5%;
+    margin-left: 0%;
+    padding: 2%;
 }
 .card{
-    width: 700px;
-    height: 600px;
-    margin: 100px 440px;
+    width: 50%;
+    height: 660px;
+    margin: 4% 25%;
     background-color: #fff;
-    border-radius:1%;
+    border-radius:4%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    justify-content:space-evenly;
 }
 .card2{
-    width: 659px;
-    height: 400px;
+    width: 95%;
+    height: 98%;
+    margin-top: 0%;
     display: flex;
     background-color: #fff;
     border-radius: 1%;
-    margin: 0px 20px;
-    border-style: solid;
-    border-width: 1px;
-    border-color: rgb(115, 171, 223);
-}
-section ul{
-    display: flex;
-    justify-content: center;
+    margin-left: 2.5%;
+    border: 2px solid rgba(58,137,180,.2);
     flex-direction: column;
-
-} 
-/* section ul li{
-    list-style: none;
-    margin-left: 20px;
-} */
-section ul li a{
-    text-decoration: none;
-    padding: 6px 15px;
-    color: #003d6b;
-    border-radius: 20px;
 }
- section ul li a:hover,
-section ul li a.active{
-    background: #fff;
-    color: #061d30;
-} 
+.card3{
+    display: flex;
+    width: 98%;
+    height: 79%;
+    border: 1px dotted;
+    border-radius: 1em;
+    font-size: 70%;
+    background-color: #eef6ff;
+}
 .link{
+    margin-left: 1.5em;
+    margin-right: 1.5em;
+    margin-bottom: 1em;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
-.govtr{
-    margin-right: 15px;
+.link img{
+    float: right;
+    max-width: 165px;
+    width: 25%;
+    height: 40%;
 }
-li{
-    margin-left: 20px;
+.link dl{
+    font-size: 85%;
+    border: none;
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    list-style: none;
+    display: block;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    height: 3em;
+    width: 70%;
+    position: relative;
 }
-body{
-    min-height: 1500px;
-    overflow-x: hidden;
+.link dl dt{
+    border: none;
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    list-style: none;
+    display: block;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    height: 1.5em;
+    white-space: nowrap;
+    overflow: hidden;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    float: left;
+    width: 33%;
+}
+.link dl dd{
+    border: none;
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    list-style: none;
+    display: block;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    height: 1.5em;
+    float: left;
+    width: 66%;
+    color: #3a89b4;
+}
+.link dl dd a{
+    color: #3a89b4;
+    text-decoration: none;
+
 }
 
+/* NAV KISMI */
+
 .secmek{
-width: 657px;
-height: 50px;
-margin: 0px;
-display: flex;
-/* border-style: solid;
-border-width: 1px;
-border-color: rgb(115, 171, 223); */
+margin: 0%;
+display: block;
+margin-top: 0.3%;
 }
-.islem{
-    width: 657px;
-    height: 200px;
-    margin: 15px;
+.secmek nav{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+}
+.nav-item{
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    border-right: 1px solid #d3d3d3;
+}
+.button{
+    box-shadow: none;
+    text-shadow: 1% 1% #cbcbcb;
+    border-bottom: none;
+}
+.secmek a{
+    display: block;
+    padding: 7px 0 0 5px;
+    background-color: #fff;
+    text-decoration: none;
+    color: #666b6e;
+    font-size: 14px;
+    border-bottom: 1px solid #e1e1e1;
+    margin: 0;
+}
+.secmek span{
+    display: block;
+    padding: .66em .66em .66em 2.2em;
+    background-size: 2em auto;
+    background-repeat: no-repeat;
+    background-image: url(auth-methods.20.svg);
+}
+.secmek .password{
+    background-position: left 10px;
+}
+.secmek .mbutton{
+    background-position: 1px -33px;
+}
+.secmek .ebutton{
+    background-position: left -78px;
+}
+.secmek .kbutton{
+    background-position: left -124px;
+}
+.secmek .ibutton{
+    background-position: left -168px;
+}
+.islem-edevlet{
+    width: 99%;
+    height: 90%;
+    margin: 0px;
+}
+#edevlet small{
+    font-size: 90%;
+    color: #4e5255;
+}
+.duzyazi{
+    border-bottom: 1px dotted #e7ebed;
+    padding-bottom: 1em;
+    font-weight: 200;
+}
+.duzyazi a{
+    text-decoration: none;
+    list-style: none;
 }
 .girisyap{
-    width: 657px;
-    height: 50px;
-    margin: 0px;
+    width: 99%;
+    height: 100%;
+    margin: 10px 0px;
     display:flex;
-    justify-content: space-around;
+    align-items: center;
+    justify-content: center;
 }
 .tckimlik{
     font-size: 13px;
-    margin: 15px;
-    margin-right: 20px;
-    display: flex;
-    justify-content: space-around;
+    margin: 2%;
+    padding: .66em 0 1em 0;
+    border-bottom: 1px dashed #e7ebed;
+    transition: background-color 1s;
+    position: relative;
 }
-.edevlet{
-    font-size: 13px;
-    margin: 15px;
-    margin-right: 20px;
-    display: flex;
-    justify-content: space-around;
+.font{
+    padding-top: .5em;
+    float: left;
+    width: 25%;
+    box-sizing: border-box;
+    padding-bottom: .25em;
+    font-weight: 400;
+}
+.edevlet-yazi{
+    padding-top: .5em;
+    margin-left: 25%;
+    margin-right: 15%;
+}
+.edevletkismi{
+    margin-left: 25%;
 }
 .sanal{
     display: flex;
     font-size: 13px;
-    justify-content: flex-end;
-    margin-right: 30px;
+}
+.sanal a{
+    margin-left: 1em;
+    text-decoration: none;
+    list-style: none;
+    color: #347aa1;
+}
+.gsmnumara{
+    font-size: 13px;
+    margin: 2%;
+    padding: .66em 0 1em 0;
+    border-bottom: 1px dashed #e7ebed;
+    transition: background-color 1s;
+    position: relative;
+}
+.gsmnumara small{
+    margin-left: 25%;
+}
+.gsmoperator{
+    font-size: 13px;
+    margin: 2%;
+    padding: .66em 0 1em 0;
+    border-bottom: 1px dashed #e7ebed;
+    transition: background-color 1s;
+    position: relative;
+}
+.gsmoperator button{
+    float: left;
+    display: block;
+    background: #FFF;
+    margin: 0;
+    margin-right: .25em;
+    padding: .5em;
+    border: 1px solid #e7ebed;
+    border-radius: .25em;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.gsmoperator small{
+    margin-left: 25%;
+}
+.fontacıklama{
+    padding-top: .5em;
+    font-size: 85%;
+    color: #4a4e50;
+    clear: both;
+}
+.red{
+    color: red;
+}
+.blue{
+    color: blue;
+}
+.card3 ul li{
+    font-size: 130%;
+}
+.card3 ul{
+    margin: 2%;
+}
+.bankalar{
+    display: block;
+    text-align: center;
+}
+.bankalar a{
+    width:64;
+    height:32;
+    margin: 1%;
+    border: 1px solid #a39a9a;
+    border-radius: 0.5em;
+    padding: 1em 1em 1em;
+    display: inline-block;
+    vertical-align: middle;
 }
 .iptal{
-    width: 70px;
-    height: 55px;
-    background-color: rgb(211, 221, 253);
-    border-radius: 10%;
-    border-style: solid;
-    border-width: 1px;
-    border-color: rgb(115, 171, 223);
+    background: rgba(150, 205, 250, 0.425);
+    background-color: rgba(74,78,80,.1);
+    border: 1px solid #c7c1c1;
+    padding: 5px 20px;
+    outline: none;
+    color: rgb(70, 70, 70);
+    border-radius: 24px;
+    transition: 0.25s;
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: 13px;
 }
 .giris{
-    width: 70px;
-    height: 55px;
-    background-color: rgb(211, 221, 253);
-    border-radius: 10%;
-    border-style: solid;
-    border-width: 1px;
-    border-color: rgb(115, 171, 223);
+    background-color: #347aa1;
+    border: 1px solid #0c5e9c;
+    padding: 5px 20px;
+    outline: none;
+    color: rgb(247, 247, 247);
+    border-radius: 24px;
+    transition: 0.25s;
+    margin-left: 10px;
+    cursor: pointer;
+    font-size: 13px;
+
 }
 .footer{
-    font-size: 12px;
-    margin: 15px;
+    font-size: 85%;
+    color: #a8acae;
+    margin-left: 3%;
+    margin-top: 0%;
+}
+.footer ul{
+    float: right;
+    border: none;
+    margin: 0;
+    margin-right: 2.5%;
+    font-weight: 400;
+    list-style: none;
+}
+.footer ul li{
+    display: inline;
+    margin-left: 1em;
+}
+.footer ul li a{
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    color: #347aa1;
+    text-decoration: none;
+    list-style: none;
+}
+#edevlet{
+    display: "";
+}
+#eimza{
+    display: none;
+}
+#mobilimza{
+    display: none;
+}
+#tckimlikkarti{
+    display: none;
+}
+
+#internetbankaciligi{
+    display: none;
+}
+
+@media screen and (max-width: 1200px){
+
+    .secmek{
+        display: none;
+    }
+    .ortaalan{
+        width: 100%;
+        height: 100%;
+        margin: 2%;
+    }
+    .footer{
+        display:flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .card{
+        width: 100%;
+        height: 100%;
+        margin: 0%;
+    }
+    .card2{
+        width: 100%;
+        height: 100%;
+        margin: 2%;
+        margin-left: 0%;
+        border-left: none;
+    }
+    .bankalar a{
+        width:34;
+        height:12;
+        margin: 1%;
+    }
+
 }

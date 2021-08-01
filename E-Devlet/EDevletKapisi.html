@@ -2,16 +2,20 @@
 <html lang="tr">
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>
             E-Devlet Kapısı
         </title>
         <link rel="stylesheet" type="text/css" href="style.css">
-        <link rel="stylesheet" href="css/bootstrap.min.css" media="all" />
-        <link rel="stylesheet" href="css/bootstrap-theme.min.css" />
-        <script src="js/bootstrap.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
     </head>
-    <body bgcolor="#5493c4">
-        <div class="card">
+    <body>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <div class="card" id="card">
             <div class="banner">
             <header>
                 <a href="#" >
@@ -19,47 +23,284 @@
                 </a>
             </header>
             <section class="link">
-                <ul style="list-style-type:none;">
+                <!-- <ul style="list-style-type:none;">
                         <li><small>Giriş Yapılacak Adres   <a href="www.turkiye.gov.tr">www.turkiye.gov.tr</a></small>
                         </li>
-                        <li><small>Giriş Yapılacak Uygulama    <span title="e-Devlet Kapısı">e-Devlet Kapısı</span></small>
+                        <li><small>Giriş Yapılacak Uygulama    <a title="e-Devlet Kapısı">e-Devlet Kapısı</a></small>
                         </li>
-                    </ul>
+                    </ul> -->
+
+                    <dl>
+                        <dt>Giriş Yapılacak Adres</dt>
+                        <dd><a href="www.turkiye.gov.tr">www.turkiye.gov.tr</a></dd>
+                        <dt>Giriş Yapılacak Uygulama</dt>
+                        <dd><a title="e-Devlet Kapısı">e-Devlet Kapısı</a></dd>
+                    </dl>
                     <img class="govtr" src="EDEVLETFOTO.PNG" alt="" width="165" height="40">
             </section>
         </div>
         <div class="ortaalan">
-            <div class="card2">
-            <ul style="list-style-type:none; padding-left: 0px;">
-                <li class="secmek" style="border-style: solid; border-width: 1px; border-color: rgb(115, 171, 223); ">
+            <div class="card2" id="card2">
+                <div class="secmek">
+                    <nav>
+                      <div class="nav-item" onclick="edevlet()">
+                        <a class="button" id="button">
+                            <span class="password">e-Devlet Şifresi</span></a>
+                      </div>
+                      <div class="nav-item" onclick="mobilimza()">
+                        <a class="button" id="button">
+                            <span class="mbutton">Mobil İmza</span></a>
+                      </div>
+                      <div class="nav-item" onclick="eimza()">
+                        <a class="button" id="button">
+                            <span class="ebutton"> e-İmza</span></a>
+                      </div>
+                      <div class="nav-item" onclick="tckimlikkarti()">
+                        <a class="button" id="button">
+                            <span class="kbutton">T.C Kimlik Kartı</span></a>
+                      </div>
+                      <div class="nav-item" onclick="internetbankaciligi()">
+                        <a class="button" id="button">
+                            <span class="ibutton">İnternet Bankacılığı</span></a>
+                      </div>
+                    </nav>
 
-                </li>
-                <li class="islem">
-                    <small>T.C. Kimlik Numaranızı ve e-Devlet Şifrenizi kullanarak kimliğiniz doğrulandıktan sonra işleminize kaldığınız yerden devam edebilirsiniz.<a href="#">e-Devlet Şifresi Nedir, Nasıl Alınır?</a></small>
-                    <p class="tckimlik">
-                        <b style="margin-right: 350px;">* T.C Kimlik No</b> <input type="text" style="border-style: solid; border-width: 1px; border-color: rgb(115, 171, 223); border-radius: 2%;">
-                    </p>
-                    <p class="sanal">
-                    <a href="#" >Sanal Klavye    </a> <a href="#">Yazareken gizle</a>
-                    </p>
-                    <p class="edevlet">
-                        <b style="margin-right: 350px;">* E-Devlet Şifresi</b> <input type="password" style="border-style: solid; border-width: 1px; border-color: rgb(115, 171, 223); border-radius: 2%;">
-                    </p>
-                    <p class="sanal">
-                    <a href="#" >Sanal Klavye    </a> <a href="#">Yazareken gizle</a> <br>
-                    <small>* e-Devlet şifrenizi unutmanız durumunda doğruladığınız cep telefonunuzdan yenileme işlemi yapabilirsiniz.</small>
-                    </p>
-                </li>
-                <li class="girisyap">
-                    <button class="iptal">İptal Et</button>
-                    <button class="giris">Giriş Yap</button>
-                </li>
-            </ul>      
+                  </div>
+                  <div class="card-body" id="edevlet">
+                      <ul style="list-style-type:none; padding-left: 0px;">
+                        <li class="islem-edevlet">
+                            <div class="duzyazi">
+                                 <small>T.C. Kimlik Numaranızı ve e-Devlet Şifrenizi kullanarak kimliğiniz doğrulandıktan sonra işleminize kaldığınız yerden devam edebilirsiniz.<a href="#">e-Devlet Şifresi Nedir, Nasıl Alınır?</a></small>
+                            </div>
+                            <div class="tckimlik">
+                            <b class="font">* T.C Kimlik No</b> <input type="text" class="gizle1" style="border-style: solid; border-width: 1px; border-color: rgb(115, 171, 223); border-radius: 2%;">
+                            <p class="sanal">
+                                <a href="#">Sanal Klavye    </a> <a href="#" onclick="gizle1()">Yazareken gizle</a>
+                            </p>
+                            </div>
+                            <div class="tckimlik">
+                               <div class="edevlet">
+                                <b class="font">* E-Devlet Şifresi</b> <input type="password" style="border-style: solid; border-width: 1px; border-color: rgb(115, 171, 223); border-radius: 2%;">
+                            </div>
+                            <div class="sanal edevletkismi">
+                                <a href="#" >Sanal Klavye    </a> <a href="#">Şifremi unuttum</a> <br>
+                            </div>
+                                <div class="edevlet-yazi duzyazi">* e-Devlet şifrenizi unutmanız durumunda doğruladığınız cep telefonunuzdan yenileme işlemi yapabilirsiniz.</div>
+
+                            </div>
+
+
+
+                        </li>
+                        <li class="girisyap">
+                            <button type="button" class="iptal">İptal Et</button>
+                            <button class="giris">Giriş Yap</button>
+                        </li>
+                    </ul>
+                  </div>
+                  <div class="card-body" id="mobilimza">
+                    <ul style="list-style-type:none; padding-left: 0px;">
+                      <li class="islem">
+                          <div class="duzyazi">
+                             <small>Cep telefonunuz ve hattınıza kayıtlı mobil imzanız ile kimliğiniz doğrulandıktan sonra işleminize kaldığınız yerden devam edebilirsiniz. Eğer farklı bir yöntem ile kimlik doğrulaması yapmak istiyorsanız, yukarıda bulunan diğer seçenekleri kullanarak da sisteme giriş yapabilirsiniz. <a href="#">Mobil İmza Nedir, Nasıl Alınır?</a></small>
+
+                          </div>
+                            <div class="tckimlik">
+                          <b class="font">* T.C Kimlik No</b> <input type="text" class="gizle2" style="border-style: solid; border-width: 1px; border-color: rgb(115, 171, 223); border-radius: 2%;">
+                           <div class="sanal">
+                              <a onclick="gizle2()" href="#">Yazarken gizle    </a>
+                          </div>
+                          </div>
+
+
+                          <div class="gsmnumara">
+                              <b class="font">* GSM Numaranız</b> <input type="tel" style="border-style: solid; border-width: 1px; border-color: rgb(115, 171, 223); border-radius: 2%;">
+                              <div class="fontacıklama"><small>Mobil imzanızın tanımlı olduğu, 10 haneli cep telefonu numaranızı giriniz. Örn: 5XXXXXXXXX</small></div>
+                          </div>
+                          <div class="gsmoperator">
+                            <b class="font">* GSM Operatörünüz</b> <button><label class="radioGroup"> <input type="radio" name="gsmtype" value="2" class="radioButton">Turk Telekom</label></button> <button><label class="radioGroup"> <input type="radio" name="gsmtype" value="2" class="radioButton">Turkcell</button> <button><label class="radioGroup"> <input type="radio" name="gsmtype" value="2" class="radioButton">Vodefon</button>
+                            <div class="fontacıklama"><small>Hattınızın hizmet aldığı GSM operatörünü seçiniz.</small></div>
+                          </div>
+                      </li>
+                      <li class="girisyap">
+                          <button type="button" class="iptal">İptal Et</button>
+                          <button class="giris">Devam et</button>
+                      </li>
+                  </ul>
+                </div>
+
+                <div class="card-body" id="eimza">
+                  <ul style="list-style-type:none; padding-left: 0px;">
+                    <li class="islem">
+                        <div class="duzyazi">
+                        <small>Elektronik İmzanız ile eşleşen kimlik numaranızı girdikten sonra işleminize devam edebilirsiniz. Eğer farklı bir yöntem ile kimlik doğrulaması yapmak istiyorsanız, yukarıda bulunan diğer seçenekleri kullanarak da sisteme giriş yapabilirsiniz. <p><a href="#">Elektronik İmza Nedir, Nasıl Alınır?</a></p> <p> <a href="#">Elektronik İmza Nedir, Nasıl Alınır?</a></p></small>
+                        </div>
+                        <div class="card3">
+                          <ul>
+                            <li>Aşağıdaki alana kimlik numaranızı yazınız.</li>
+                            <li>Masaüstünüzde bulunan e-imza uygulamasını açınız ve ekrandaki işlem kodunu giriniz. ( e-Devlet Kapısı e-İmza Uygulaması'nı bilgisayarınıza indirmelisiniz. Uygulamayı indirmek için <a class="blue">tıklayınız</a>. Daha önce indirdiyseniz tekrar indirmenize gerek yoktur.)</li>
+                            <li class="red">Eğer uygulamayı indirmede sorun yaşıyor ya da bağlantı hatası alıyorsanız linkteki dosyayı indiriniz. Dosyayı indirmek için <a class="blue">tıklayınız</a>.</li>
+                            <li>İmzalama işlemini gerçekleştiriniz.</li>
+                          </ul>
+                        </div>
+                        <div class="tckimlik">
+                        <b class="font">* T.C Kimlik No</b> <input type="text" class="gizle3" style="border-style: solid; border-width: 1px; border-color: rgb(115, 171, 223); border-radius: 2%;">
+                        <p class="sanal">
+                            <a onclick="gizle3()" href="#">Yazareken gizle</a>
+                        </p>
+                         </div>
+
+                    </li>
+                    <li class="girisyap">
+                        <button type="button" class="iptal">İptal Et</button>
+                        <button class="giris">Devam et</button>
+                    </li>
+                </ul>
+              </div>
+
+              <div class="card-body" id="tckimlikkarti">
+                <ul style="list-style-type:none; padding-left: 0px;">
+                  <li class="islem">
+                      <div class="duzyazi">
+                      <small>Kimlik numaranızı girdikten sonra işleminize devam edebilirsiniz. Eğer farklı bir yöntem ile kimlik doğrulaması yapmak istiyorsanız, yukarıda bulunan diğer seçenekleri kullanarak da sisteme giriş yapabilirsiniz. <a href="#">T.C. Kimlik Kartı Nedir?</a></small>
+                      </div>
+                      <div class="card3">
+                        <ul>
+                          <li>Aşağıdaki alana kimlik numaranızı yazınız.</li>
+                          <li>Masaüstünüzde bulunan Kimlik Kartı uygulamasını açınız ve ekrandaki işlem kodunu giriniz. ( e-Devlet Kapısı Kimlik Kartı Uygulaması'nı bilgisayarınıza indirmelisiniz. Uygulamayı indirmek için <a class="blue">tıklayınız</a>. Daha önce indirdiyseniz tekrar indirmenize gerek yoktur.)</li>
+                          <li>Kimlik kartı doğrulama işlemini gerçekleştiriniz.</li>
+                        </ul>
+                      </div>
+                      <div class="tckimlik">
+                      <b class="font">* T.C Kimlik No</b> <input class="gizle4" type="text" style="border-style: solid; border-width: 1px; border-color: rgb(115, 171, 223); border-radius: 2%;">
+                      <p class="sanal">
+                          <a onclick="gizle4()" href="#">Yazareken gizle</a>
+                      </p>
+                     </div>
+
+                  </li>
+                  <li class="girisyap">
+                      <button type="button" class="iptal">İptal Et</button>
+                      <button class="giris">Devam et</button>
+                  </li>
+              </ul>
+            </div>
+
+            <div class="card-body" id="internetbankaciligi">
+                <div class="duzyazi">
+                   <small>Aşağıdaki bankaların İnternet şubeleri aracılığı ile başka bir şifreye ihtiyaç duymadan, güvenli bir şekilde e-Devlet Kapısı'na giriş yapabilirsiniz. Bunun için aşağıdaki listeden İnternet bankacılığı kullanıcı hesabınız bulunan bankayı seçmeniz ve İnternet bankacılığı kullanıcı bilgileriniz ile giriş yapmanız yeterlidir.
+                </small> 
+                </div>
+                
+                <div class="bankalar">
+                    <a href="https://www.akbank.com/tr-tr/sayfalar/default.aspx"><img src="https://cdn.e-devlet.gov.tr/themes/ankara/images/logos/external/0046.png" alt="Akbank ile Giriş Yap"></a>
+                    <a href="https://www.albaraka.com.tr/tr"><img src="https://cdn.e-devlet.gov.tr/themes/ankara/images/logos/external/0203.png" alt="Albaraka Türk ile Giriş Yap"></a>
+                    <a href="https://www.anadolubank.com.tr/sizin-icin"><img src="https://cdn.e-devlet.gov.tr/themes/ankara/images/logos/external/0135.png" alt="Anadolubank ile Giriş Yap"></a>
+                    <a href="https://www.burgan.com.tr/"><img src="https://cdn.e-devlet.gov.tr/themes/ankara/images/logos/external/0125.png" alt="Burgan Bank ile Giriş Yap"></a>
+                    <a href="https://www.denizbank.com/"><img src="https://cdn.e-devlet.gov.tr/themes/ankara/images/logos/external/0134.png" alt="Denizbank ile Giriş Yap"></a>
+                    <a href="https://emlakkatilim.com.tr/"><img src="https://cdn.e-devlet.gov.tr/themes/ankara/images/logos/external/0211.png" alt="Emlak Katılım Bankası ile Giriş Yap"></a>
+                    <a href="https://www.fibabanka.com.tr/"><img src="https://cdn.e-devlet.gov.tr/themes/ankara/images/logos/external/0103.png" alt="Fibabanka ile Giriş Yap"></a>
+                    <a href="https://www.qnbfinansbank.com/"><img src="https://cdn.e-devlet.gov.tr/themes/ankara/images/logos/external/0111.png" alt="Garanti Bankası ile Giriş Yap"></a>
+    
+                    <a href="https://www.garantibbva.com.tr/tr"><img src="https://cdn.e-devlet.gov.tr/themes/ankara/images/logos/external/0062.png" alt="Garanti Bankası ile Giriş Yap"></a>
+                    <a href="https://www.halkbank.com.tr/"><img src="https://cdn.e-devlet.gov.tr/themes/ankara/images/logos/external/0012.png" alt="Halkbank ile Giriş Yap"></a>
+                    <a href="https://www.hsbc.com.tr/"><img src="https://cdn.e-devlet.gov.tr/themes/ankara/images/logos/external/0123.png" alt="HSBCBank ile Giriş Yap"></a>
+                    <a href="https://www.ing.com.tr/tr"><img src="https://cdn.e-devlet.gov.tr/themes/ankara/images/logos/external/0099.png" alt="INGBank ile Giriş Yap"></a>
+                    <a href="https://www.kuveytturk.com.tr/"><img src="https://cdn.e-devlet.gov.tr/themes/ankara/images/logos/external/0205.png" alt="Kuveyt Türk ile Giriş Yap"></a>
+                    <a href="https://www.odeabank.com.tr/"><img src="https://cdn.e-devlet.gov.tr/themes/ankara/images/logos/external/0146.png" alt="Odeabank ile Giriş Yap"></a>
+                    <a href="https://www.sekerbank.com.tr/"><img src="https://cdn.e-devlet.gov.tr/themes/ankara/images/logos/external/0059.png" alt="Şekerbank ile Giriş Yap"></a>
+                    <a href="https://www.teb.com.tr/"><img src="https://cdn.e-devlet.gov.tr/themes/ankara/images/logos/external/0032.png" alt="Türk Ekonomi Bankası ile Giriş Yap"></a>
+                    <a href="https://www.turkiyefinans.com.tr/tr-tr/Sayfalar/default.aspx"><img src="https://cdn.e-devlet.gov.tr/themes/ankara/images/logos/external/0206.png" alt="Türkiye Finas Bankası ile Giriş Yap"></a>
+    
+                    <a href="https://www.isbank.com.tr/"><img src="https://cdn.e-devlet.gov.tr/themes/ankara/images/logos/external/0064.png" alt="Türkiye İş Bankası ile Giriş Yap"></a>
+                    <a href="https://www.vakifbank.com.tr/"><img src="https://cdn.e-devlet.gov.tr/themes/ankara/images/logos/external/0015.png" alt="Vakıfbank ile Giriş Yap"></a>
+                    <a href="https://www.vakifkatilim.com.tr/tr"><img src="https://cdn.e-devlet.gov.tr/themes/ankara/images/logos/external/0210.png" alt="Vakıf Katılım ile Giriş Yap"></a>
+    
+                    <a href="https://www.yapikredi.com.tr/"><img src="https://cdn.e-devlet.gov.tr/themes/ankara/images/logos/external/0067.png" alt="Yapıkredi Bankası ile Giriş Yap"></a>
+                    <a href="https://www.ziraatbank.com.tr/tr"><img src="https://cdn.e-devlet.gov.tr/themes/ankara/images/logos/external/0010.png" alt="Ziraat Bankası ile Giriş Yap"></a>
+                    <a href="https://www.ziraatkatilim.com.tr/"><img src="https://cdn.e-devlet.gov.tr/themes/ankara/images/logos/external/0209.png" alt="Ziraat Katılım Bankası ile Giriş Yap"></a>
+                </div>
+    
+            </div>
             </div>
         </div>
-            <div class="footer">
-                <small>2021,Ankara - Tüm Hakları Saklıdır</small>
-            </div>               
-          </div>
+        <div class="footer">
+            <ul>
+                <li>
+                    <a href="#">Gizlilik ve Güvenlik </a>
+                </li>
+                <li>
+                    <a href="#">Hızlı Çözüm Merkezi</a>
+                </li>
+            </ul>
+                <small>© 2021,Ankara - Tüm Hakları Saklıdır</small>
+        </div>
+
+
+</div>
+
+          <script>
+            function edevlet(){
+                document.querySelector('#edevlet').style.display="block";
+                document.querySelector('#tckimlikkarti').style.display="none";
+                document.querySelector('#mobilimza').style.display="none";
+                document.querySelector('#eimza').style.display="none";
+                document.querySelector('#internetbankaciligi').style.display="none";
+                document.querySelector('#card').style.height="660px";
+                document.querySelector('#card2').style.marginTop="0%";
+            }
+            function mobilimza(){
+                document.querySelector('#mobilimza').style.display="block";
+                document.querySelector('#tckimlikkarti').style.display="none";
+                document.querySelector('#eimza').style.display="none";
+                document.querySelector('#edevlet').style.display="none";
+                document.querySelector('#internetbankaciligi').style.display="none";
+                document.querySelector('#card').style.height="710px";
+                document.querySelector('#card2').style.marginTop="0%";
+            }
+            function eimza(){
+                document.querySelector('#eimza').style.display="block";
+                document.querySelector('#mobilimza').style.display="none";
+                document.querySelector('#tckimlikkarti').style.display="none";
+                document.querySelector('#edevlet').style.display="none";
+                document.querySelector('#internetbankaciligi').style.display="none";
+                document.querySelector('#card').style.height="770px";
+                document.querySelector('#card2').style.marginTop="0%";
+            }
+            function tckimlikkarti(){
+                document.querySelector('#tckimlikkarti').style.display="block";
+                document.querySelector('#eimza').style.display="none";
+                document.querySelector('#mobilimza').style.display="none";
+                document.querySelector('#edevlet').style.display="none";
+                document.querySelector('#internetbankaciligi').style.display="none";
+                document.querySelector('#card').style.height="700px";
+                document.querySelector('#card2').style.marginTop="0%";
+            }
+            function internetbankaciligi(){
+                document.querySelector('#internetbankaciligi').style.display="block";
+                document.querySelector('#eimza').style.display="none";
+                document.querySelector('#mobilimza').style.display="none";
+                document.querySelector('#edevlet').style.display="none";
+                document.querySelector('#tckimlikkarti').style.display="none";
+                document.querySelector('#card').style.height="810px";
+                document.querySelector('#card2').style.marginTop="0%";
+            }
+
+            function gizle1(){
+                document.querySelector('.gizle1').type="password";
+            }
+            function gizle2(){
+                document.querySelector('.gizle2').type="password";
+            }
+            function gizle3(){
+                document.querySelector('.gizle3').type="password";
+            }
+            function gizle4(){
+                document.querySelector('.gizle4').type="password";
+            }
+            function gizle5(){
+                document.querySelector('.gizle5').type="password";
+            }
+        </script>
     </body>
-</html>        
+</html>
