@@ -1,0 +1,25 @@
+#slider{
+    position: relative;
+    margin: 0 auto;
+    width: 640px;
+    height: 436px; 
+    font: sans-serif;
+    overflow: hidden;
+}
+
+
+.kontrol{
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+.kontrol a{
+    color: #fefcc1cc;
+    background-color: rgba(127, 255, 212, 0.308);
+    padding: 10px;
+}
